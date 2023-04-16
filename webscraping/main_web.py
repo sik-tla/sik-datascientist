@@ -1,7 +1,7 @@
 
-from bs4 import BeautifulSoup as bs
+from bs4 import BeautifulSoup
 import requests
-import networkx as nx
+# import networkx as nx
 
 # class Spider: #TODO overvejer class
 # """Creating web crawler spider network from a website"""
@@ -15,13 +15,13 @@ import networkx as nx
 
 
 
-def main():
+def sik_ulr(url):
     # Define the website to crawl
-    website = "https://www.sit.dk/"
+    website = url
     # Create a spider network
     r = requests.get(website)
     # Create a BeautifulSoup object
-    soup = bs(r.content, "html.parser")
+    soup = BeautifulSoup(r.content, "html.parser")
     # Find all links in the website and save them in a list, looking for a-tags
     links = soup.find_all("a")
     breakpoint()
