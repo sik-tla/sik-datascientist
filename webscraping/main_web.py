@@ -16,6 +16,8 @@ import requests
 
 
 def sik_ulr(url):
+    # hjemmesider som bliver henvist til.
+
     # Define the website to crawl
     website = url
     # Create a spider network
