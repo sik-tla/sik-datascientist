@@ -1,3 +1,4 @@
 *.sql
 *.py
 .pytest_cache
+.idea
